@@ -35,7 +35,7 @@ const ProductCard = ({ e, onCardSelect, products, name }) => {
 
   return (
     <Grid className='PRODUCT' item xs={1} sm={4} md={4}>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ width: '100%' }}>
         <CardHeader
           avatar={<FastfoodIcon />}
           title={e.name}

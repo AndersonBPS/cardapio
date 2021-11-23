@@ -22,11 +22,12 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '90%',
+  width: '87%',
   height: '85%',
   overflowX: 'hidden',
   borderRadius: '5px',
   flexGrow: 1,
+  p: '1%',
 };
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -112,7 +113,7 @@ const ProductsModal = ({ onCardSelect, products, name, cardType }) => {
       >
         <Fade in={open}>
           <Box id='1' sx={style}>
-            <Grid id='2' container spacing={{ xs: 2, md: 3 }} columns={{ xs: 1, sm: 8, md: 12 }}>
+            <Grid id='2' container direction="row" justifyContent="center" alignItems="center" spacing={{ xs: 2, md: 3 }} columns={{ xs: 1, sm: 8, md: 12 }}>
               {
                 categoryProducts.map((e) => (
                   <ProductCard e={e} onCardSelect={onCardSelect} products={products} name={name}/>
