@@ -12,8 +12,8 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '90%',
-  height: '91%',
+  width: '80%',
+  height: '90%',
   overflowX: 'hidden',
   flexGrow: 1,
 };
