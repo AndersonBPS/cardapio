@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cardapio/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/cardapio/static/js/main.de5852df.chunk.js",
+    "main.js.map": "/cardapio/static/js/main.de5852df.chunk.js.map",
+    "runtime-main.js": "/cardapio/static/js/runtime-main.bf010df2.js",
+    "runtime-main.js.map": "/cardapio/static/js/runtime-main.bf010df2.js.map",
+    "static/js/2.0b291a31.chunk.js": "/cardapio/static/js/2.0b291a31.chunk.js",
+    "static/js/2.0b291a31.chunk.js.map": "/cardapio/static/js/2.0b291a31.chunk.js.map",
+    "static/js/3.cc06e24c.chunk.js": "/cardapio/static/js/3.cc06e24c.chunk.js",
+    "static/js/3.cc06e24c.chunk.js.map": "/cardapio/static/js/3.cc06e24c.chunk.js.map",
+    "index.html": "/cardapio/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/cardapio/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.0b291a31.chunk.js.LICENSE.txt": "/cardapio/static/js/2.0b291a31.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bf010df2.js",
+    "static/js/2.0b291a31.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.de5852df.chunk.js"
+  ]
+}
