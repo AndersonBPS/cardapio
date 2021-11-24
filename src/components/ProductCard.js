@@ -14,6 +14,9 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Fade from '@mui/material/Fade';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -29,8 +32,23 @@ const ExpandMore = styled((props) => {
 const ProductCard = ({ e, onCardSelect, products, name }) => {
   const [expanded, setExpanded] = React.useState(false);
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
+  const [open, setOpen] = React.useState(false);
+  const handleClick = () => {setOpen((prev) => !prev);};
+  const handleClickAway = () => {setOpen(false);};
+  
+  const handleExpandClick = () => {setExpanded(!expanded);};
+  
+  const qtyBox = {
+    position: 'absolute',
+    height: '100%',
+    width: '100%',
+    top: '-43%',
+    right: 0,
+    left: 0,
+    zIndex: 1,
+    border: '1px solid',
+    p: 1,
+    bgcolor: 'background.paper',
   };
 
   return (
@@ -59,11 +77,24 @@ const ProductCard = ({ e, onCardSelect, products, name }) => {
               &nbsp;
               Retirar do pedido
             </Button> :
-            <Button size="small" onClick={() => onCardSelect(e.name)}>
-              <AddIcon />
-              &nbsp;
-              Adicionar ao pedido
-            </Button>
+            <>
+              <ClickAwayListener onClickAway={handleClickAway}>
+                <Box sx={{ position: 'relative' }}>
+                  <Button size="small" onClick={handleClick}>
+                    <AddIcon />
+                    &nbsp;
+                    Adicionar ao pedido
+                  </Button>
+                    {open ? (
+                      <Box sx={qtyBox}>
+                        <Button size="small" onClick={() => onCardSelect(e.name)}>
+                          <AddIcon />
+                        </Button>
+                      </Box>
+                    ) : null}
+                </Box>
+              </ClickAwayListener>
+            </>
           }
           <ExpandMore
             expand={expanded}
